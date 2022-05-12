@@ -23,6 +23,7 @@ img {
 .slider {
     width: 100vw;
     height: 100vh;
+    padding: 0 0.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +49,7 @@ img {
     display: flex;
     font-size: 0;
     color: #fff;
+    transition: all 1s ease;
 }
 
 .navigator {
@@ -137,4 +139,24 @@ input[type="radio"] {
 
 #slide5:checked~* label#bar5 {
     background-color: transparent;
+}
+
+@media (max-width: 510px) {
+    .container {
+        width: 20rem;
+    }
+    .slides {
+        height: 20rem;
+        order: 1;
+    }
+    .text {
+        flex-basis: 100%;
+        order: 3;
+        justify-content: center;
+    }
+    .navigator {
+        flex-basis: 100%;
+        order: 2;
+        justify-content: center;
+    }
 }
