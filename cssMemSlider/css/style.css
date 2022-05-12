@@ -1,0 +1,140 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #25282A;
+}
+
+img {
+    width: 100%;
+    /* object-fit: contain; */
+    transition: all 0.5s ease;
+}
+
+.slider {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.slides {
+    height: 30rem;
+    display: flex;
+    flex-basis: 100%;
+}
+
+.text {
+    flex-basis: 50%;
+    display: flex;
+    font-size: 0;
+    color: #fff;
+}
+
+.navigator {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+}
+
+input[type="radio"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.bar {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: #699FEC;
+    cursor: pointer;
+    border: 0.125rem solid #699FEC;
+    transition: all 0.5s ease;
+}
+
+.bar:hover {
+    background-color: #fff;
+    border: 0.125rem solid #fff;
+}
+
+#slide1:checked~* p#text1 {
+    font-size: 1rem;
+}
+
+#slide2:checked~* p#text2 {
+    font-size: 1rem;
+}
+
+#slide3:checked~* p#text3 {
+    font-size: 1rem;
+}
+
+#slide4:checked~* p#text4 {
+    font-size: 1rem;
+}
+
+#slide5:checked~* p#text5 {
+    font-size: 1rem;
+}
+
+#slide1:checked~* .m1 {
+    margin-left: 0;
+}
+
+#slide2:checked~* .m2 {
+    margin-left: -100%;
+}
+
+#slide3:checked~* .m3 {
+    margin-left: -200%;
+}
+
+#slide4:checked~* .m4 {
+    margin-left: -300%;
+}
+
+#slide5:checked~* .m5 {
+    margin-left: -400%;
+}
+
+#slide1:checked~* label#bar1 {
+    background-color: transparent;
+}
+
+#slide2:checked~* label#bar2 {
+    background-color: transparent;
+}
+
+#slide3:checked~* label#bar3 {
+    background-color: transparent;
+}
+
+#slide4:checked~* label#bar4 {
+    background-color: transparent;
+}
+
+#slide5:checked~* label#bar5 {
+    background-color: transparent;
+}
